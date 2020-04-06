@@ -20,7 +20,22 @@
 
 ;;; Commentary:
 
-;; 
+;; This package provides a simple way to treat text in a buffer as a
+;; template with placeholders where text needs to be filled in. Any
+;; occurrence of <++> in the buffer is a placeholder. You can navigate
+;; among the placeholder with the `placeholder-forward' and
+;; `placeholder-backward' commands. They move the point to the next
+;; placeholder in the specified direction and delete the placeholder
+;; so you can immediately start typing the text that should replace
+;; it. However, if you call them again immediately after, they restore
+;; that occurrence of the placeholder and move to the next.
+
+;; The placeholder in only <++> by default, it can be changed by
+;; customizing the `placeholder-string' variable.
+
+;; A `placeholder-insert' command is also provided, to insert the
+;; placeholder string.
+ 
 
 ;;; Code:
 
