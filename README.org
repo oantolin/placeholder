@@ -24,15 +24,15 @@ I suggest the following keybindings:
 | =placeholder-backward= | =C-S-p=                      |
 | =placeholder-insert=   | =C-S-x=  (X marks the spot!) |
 
-* Use cases
+* When to use Placeholder over richer templating options?
 
 Why not just use [[http://joaotavora.github.io/yasnippet/][YASnippet]] or the built-in [[https://www.gnu.org/software/emacs/manual/html_node/autotype/index.html][Skeletons]] or [[https://www.gnu.org/software/emacs/manual/html_node/autotype/Tempo.html][Tempo]]
 libraries? All of these great packages are /much/ more featureful and
-ambitious than Placeholder, but require defining the template in
+ambitious than Placeholder, but they require defining the template in
 advance and arranging for some way to insert it in a buffer: naming
 the template or binding it to a key. This makes perfect sense for
 templates you plan to use many times, like for loops or CommonMark
-code blocks ---or other things people typically make snippets for. But
+code blocks, or other things people typically make snippets for. But
 it can feel like too much work if you just want to leave some spots
 marked in your buffer to fill in later, or to make bespoke templates
 you only ever plan to use a few times. In those situations Placeholder
