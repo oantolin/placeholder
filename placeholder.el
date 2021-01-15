@@ -42,16 +42,27 @@
 
 ;;; Code:
 
+(defgroup placeholder nil
+  "Easy insertion and filling of placeholders."
+  :group 'editing)
+
 (defcustom placeholder-string "<++>"
   "String used by `placeholder-insert' as a placeholder.
 Pick a string unlikely to appear in your buffers."
   :type 'string)
 
+(defface placeholder
+  '((((class color) (min-colors 88) (background dark)) :foreground "#60cfa2")
+    (((class color) (min-colors 88) (background light)) :foreground "#005040")
+    (t :foreground "green"))
+  "Face for `placeholder-insert' strings.")
 
 (defun placeholder-insert ()
   "Insert the `placeholder-string' in the current buffer."
   (interactive)
-  (insert placeholder-string))
+  (insert (propertize placeholder-string
+                      'font-lock-face 'placeholder
+                      'rear-nonsticky 'font-lock-face)))
 
 (defun placeholder-forward (count)
   "Move forward over COUNT occurrences of `placeholder-string'.
