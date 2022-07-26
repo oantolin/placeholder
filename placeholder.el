@@ -33,7 +33,7 @@
 ;; However, if you call them again immediately after, they restore that
 ;; occurrence of the placeholder and move to the next.
 
-;; The placeholder in only <++> by default, it can be changed by
+;; The placeholder is <++> by default, but it can be changed by
 ;; customizing the `placeholder-string' variable.
 
 ;; A `placeholder-insert' command is also provided, to insert the
